@@ -1,13 +1,13 @@
 version: "3"
 services:
-  react:
+  web:
     build:
       context: .
       dockerfile: Dockerfile.dev
     ports:
       - "3000:3000"
     volumes:
-      - /app/mode_modules
+      - /app/node_modules
       - .:/app
   tests:
     stdin_open: true
